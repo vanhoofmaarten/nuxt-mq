@@ -52,7 +52,7 @@ using top level options
 
 ## Usage
 
-[Click here]/AlexandreBonaventure/vue-mq) for all options and features of vue-mq
+[Click here](/AlexandreBonaventure/vue-mq) for all options and features of vue-mq
 
 ## Development
 
@@ -64,9 +64,9 @@ using top level options
 
 [MIT License](./LICENSE)
 
-Copyright (c) Maarten Van Hoof <info@mrtnvh.com>
+Copyright (c) [Maarten Van Hoof](https://mrtnvh.com)
 
 ## Credits
 
-1. [vue-mq]/AlexandreBonaventure/vue-mq) for providing the plugin.
-2. [@nuxtjs/analytics-module]/nuxt-community/analytics-module) for providing a excellent example on how to build a basic Nuxt.js module.
+1. [vue-mq](/AlexandreBonaventure/vue-mq) for providing the plugin.
+2. [@nuxtjs](/analytics-module]/nuxt-community/analytics-module) for providing a excellent example on how to build a basic Nuxt.js module.
