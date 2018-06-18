@@ -22,19 +22,37 @@ The module features
 {
   modules: [
     // Simple usage
-    'nuxt-mq',
-
-    // With options
-    ['nuxt-mq', { /* module options */ }],
+    ['nuxt-mq', {
+      breakpoints: {
+        sm: 450,
+        md: 1250,
+        lg: Infinity,
+      }
+    }]
  ]
+}
+```
+using top level options
+
+```js
+{
+  modules: [
+    ['nuxt-mq']
+  ],
+ 
+ 'mq': {
+    breakpoints: {
+      sm: 450,
+      md: 1250,
+      lg: Infinity,
+    }
+  }
 }
 ```
 
 ## Usage
 
-Define your breakpoints and build responsive design semantically and declaratively in a mobile-first way with Nuxt.
-
-Credits go to [vue-mq](https://github.com/AlexandreBonaventure/vue-mq)
+[Click here](https://github.com/AlexandreBonaventure/vue-mq) for all options and features of vue-mq
 
 ## Development
 
@@ -47,3 +65,8 @@ Credits go to [vue-mq](https://github.com/AlexandreBonaventure/vue-mq)
 [MIT License](./LICENSE)
 
 Copyright (c) Maarten Van Hoof <info@mrtnvh.com>
+
+## Credits
+
+1. [vue-mq](https://github.com/AlexandreBonaventure/vue-mq) for providing the plugin.
+2. [@nuxtjs/analytics-module](https://github.com/nuxt-community/analytics-module) for providing a excellent example on how to build a basic Nuxt.js module.

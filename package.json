@@ -1,7 +1,7 @@
 {
   "name": "nuxt-mq",
   "version": "0.0.0",
-  "description": "Define your breakpoints and build responsive design semantically and declaratively in a mobile-first way with Nuxt",
+  "description": "vue-mq module for Nuxt.js",
   "license": "MIT",
   "contributors": [
     {
@@ -29,7 +29,9 @@
     "testEnvironment": "node",
     "collectCoverage": true
   },
-  "dependencies": {},
+  "dependencies": {
+    "vue-mq": "^0.2.1"
+  },
   "devDependencies": {
     "nuxt": "latest",
     "codecov": "latest",
