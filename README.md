@@ -32,7 +32,9 @@ The module features
 
 ## Usage
 
-Module Description
+Define your breakpoints and build responsive design semantically and declaratively in a mobile-first way with Nuxt.
+
+Credits go to [vue-mq](https://github.com/AlexandreBonaventure/vue-mq)
 
 ## Development
 
