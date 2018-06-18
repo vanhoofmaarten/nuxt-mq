@@ -3,9 +3,18 @@
   "version": "1.0.2",
   "description": "vue-mq module for Nuxt.js",
   "license": "MIT",
+  "keywords": [
+    "nuxt",
+    "nuxt.js",
+    "nuxtjs",
+    "vue",
+    "vue.js",
+    "vuejs",
+    "media queries"
+  ],
   "contributors": [
     {
-      "name": "Maarten Van Hoof <info@mrtnvh.com>"
+      "name": "Maarten Van Hoof (@mrtnvh)"
     }
   ],
   "main": "lib/module.js",
