@@ -12,7 +12,7 @@
 
 ## Features
 
-The module features
+[vue-mq](/AlexandreBonaventure/vue-mq) module for Nuxt.js.
 
 ## Setup
 - Add `nuxt-mq` dependency using yarn or npm to your project
@@ -52,7 +52,7 @@ using top level options
 
 ## Usage
 
-[Click here](/AlexandreBonaventure/vue-mq) for all options and features of vue-mq
+[Click here](/AlexandreBonaventure/vue-mq) for all options and features of [vue-mq](/AlexandreBonaventure/vue-mq).
 
 ## Development
 
@@ -69,4 +69,4 @@ Copyright (c) [Maarten Van Hoof](https://mrtnvh.com)
 ## Credits
 
 1. [vue-mq](/AlexandreBonaventure/vue-mq) for providing the plugin.
-2. [@nuxtjs](/analytics-module]/nuxt-community/analytics-module) for providing a excellent example on how to build a basic Nuxt.js module.
+2. [@nuxtjs](/analytics-module/nuxt-community/analytics-module) for providing a excellent example on how to build a basic Nuxt.js module.
