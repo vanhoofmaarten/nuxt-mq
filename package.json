@@ -18,7 +18,7 @@
     }
   ],
   "main": "lib/module.js",
-  "repository": "https://github.com/https://github.com/vanhoofmaarten/nuxt-mq",
+  "repository": "https://github.com/vanhoofmaarten/nuxt-mq",
   "publishConfig": {
     "access": "public"
   },
