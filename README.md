@@ -75,4 +75,4 @@ Copyright (c) [Maarten Van Hoof](https://mrtnvh.com)
 ## Credits
 
 1. [vue-mq](https://github.com/AlexandreBonaventure/vue-mq) for providing the plugin.
-2. [@nuxtjs](/analytics-module/nuxt-community/analytics-module) for providing a excellent example on how to build a basic Nuxt.js module.
+2. [@nuxtjs](https://github.com/nuxt-community/analytics-module) for providing a excellent example on how to build a basic Nuxt.js module.
