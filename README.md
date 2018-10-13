@@ -25,8 +25,10 @@
   modules: [
     // Simple usage
     [
-      "nuxt-mq",
+      'nuxt-mq',
       {
+        // Default breakpoint for SSR
+        defaultBreakpoint: 'default',
         breakpoints: {
           sm: 450,
           md: 1250,
@@ -47,6 +49,7 @@ using top level options
   ],
 
  'mq': {
+    defaultBreakpoint: 'default',
     breakpoints: {
       sm: 450,
       md: 1250,
@@ -64,7 +67,7 @@ using top level options
 
 - Clone this repository
 - Install dependencies using `yarn install` or `npm install`
-- Start development server using `npm run dev`
+- Start development server using `npm run dev` or with Node debugging on `npm run dev-debug`
 
 ## License
 
