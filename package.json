@@ -23,7 +23,8 @@
     "access": "public"
   },
   "scripts": {
-    "dev": "nuxt test/fixture",
+    "dev": "nuxt test/fixture -c with_mq_nuxt.config.js",
+    "dev-debug": "node --inspect ./node_modules/nuxt/bin/nuxt test/fixture -c with_mq_nuxt.config.js",
     "lint": "eslint lib test",
     "test": "npm run lint && jest",
     "release": "standard-version && git push --follow-tags && npm publish"

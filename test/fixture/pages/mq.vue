@@ -1,3 +1,3 @@
 <template>
-  <div>Works!</div>
+  <div>{{ $mq }}</div>
 </template>
