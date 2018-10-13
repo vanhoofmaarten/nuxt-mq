@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/vanhoofmaarten/nuxt-mq/compare/v1.0.5...v1.1.0) (2018-10-13)
+
+
+### Features
+
+* **SSR:** Added SSR support ([6cabd2b](https://github.com/vanhoofmaarten/nuxt-mq/commit/6cabd2b)), closes [#3](https://github.com/vanhoofmaarten/nuxt-mq/issues/3) [#4](https://github.com/vanhoofmaarten/nuxt-mq/issues/4)
+
+
+
 <a name="1.0.5"></a>
 ## [1.0.5](https://github.com/vanhoofmaarten/nuxt-mq/compare/v1.0.4...v1.0.5) (2018-06-19)
 
