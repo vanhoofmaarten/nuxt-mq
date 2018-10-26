@@ -25,8 +25,13 @@
   "scripts": {
     "dev": "nuxt test/fixture -c with_mq_nuxt.config.js",
     "dev-debug": "node --inspect ./node_modules/nuxt/bin/nuxt test/fixture -c with_mq_nuxt.config.js",
+    "build": "nuxt build test/fixture -c with_mq_nuxt.config.js",
+    "start": "nuxt start test/fixture -c with_mq_nuxt.config.js",
+    "generate": "nuxt generate test/fixture -c with_mq_nuxt.config.js",
+    "build-spa": "nuxt build test/fixture -c with_mq_nuxt.config.js --spa  --verbose",
+    "start-spa": "nuxt start test/fixture -c with_mq_nuxt.config.js --spa",
     "lint": "eslint lib test",
-    "test": "npm run lint && jest",
+    "test": "npm run lint && jest --detectOpenHandles",
     "release": "standard-version && git push --follow-tags && npm publish"
   },
   "eslintIgnore": [
@@ -40,11 +45,11 @@
     "collectCoverage": true
   },
   "dependencies": {
-    "vue-mq": "^0.2.1"
+    "vue-mq": "latest"
   },
   "devDependencies": {
-    "nuxt": "latest",
     "codecov": "latest",
+    "ecstatic": "latest",
     "eslint": "latest",
     "eslint-config-standard": "latest",
     "eslint-plugin-import": "latest",
@@ -55,6 +60,9 @@
     "eslint-plugin-vue": "latest",
     "jest": "latest",
     "jsdom": "latest",
+    "nuxt": "latest",
+    "pkg-dir": "latest",
+    "promisify-child-process": "^2.1.2",
     "standard-version": "latest"
   }
 }
