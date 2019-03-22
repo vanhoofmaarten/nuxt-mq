@@ -32,6 +32,7 @@
     "start-spa": "nuxt start test/fixture -c with_mq_nuxt.config.js --spa",
     "lint": "eslint lib test",
     "test": "npm run lint && jest --detectOpenHandles",
+    "codecov": "codecov",
     "release": "standard-version && git push --follow-tags && npm publish"
   },
   "eslintIgnore": [
