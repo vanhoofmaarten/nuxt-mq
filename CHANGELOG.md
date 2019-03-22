@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [2.0.0](https://github.com/vanhoofmaarten/nuxt-mq/compare/v1.1.3...v2.0.0) (2019-03-22)
+
+
+### Bug Fixes
+
+* **nuxt:** added await nuxt.ready() to tests ([48d506f](https://github.com/vanhoofmaarten/nuxt-mq/commit/48d506f))
+
+
+### Features
+
+* **vue-mq:** updated to v1.0.1 ([4d538b7](https://github.com/vanhoofmaarten/nuxt-mq/commit/4d538b7))
+
+
+
 <a name="1.1.3"></a>
 ## [1.1.3](https://github.com/vanhoofmaarten/nuxt-mq/compare/v1.1.2...v1.1.3) (2018-10-27)
 
