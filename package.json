@@ -45,7 +45,7 @@
     "collectCoverage": true
   },
   "dependencies": {
-    "vue-mq": "latest"
+    "vue-mq": "^1.0.1"
   },
   "devDependencies": {
     "codecov": "latest",
