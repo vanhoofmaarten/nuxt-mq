@@ -22,6 +22,7 @@ describe('VueMq', () => {
 
   test('default', async () => {
     nuxt = nuxtDefault
+    await nuxt.ready()
     await new Builder(nuxtDefault).build()
     await nuxt.listen(process.env.PORT)
     let html = await get('/')
@@ -31,6 +32,7 @@ describe('VueMq', () => {
 
   test('with mq', async () => {
     nuxt = nuxtWithMq
+    await nuxt.ready()
     await new Builder(nuxtWithMq).build()
     await nuxt.listen(process.env.PORT)
 
