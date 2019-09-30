@@ -7,5 +7,7 @@ module.exports = {
   render: {
     resourceHints: false
   },
-  modules: ['@@']
+  modules: [
+    { handler: require('../../') }
+  ]
 }
