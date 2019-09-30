@@ -14,30 +14,28 @@ const url = path => `http://localhost:${process.env.PORT}${path}`
 const get = path => request(url(path))
 
 describe('VueMq', () => {
-  let nuxt
-
-  afterEach(async () => {
-    await nuxt.close()
-  })
-
   test('default', async () => {
-    nuxt = nuxtDefault
+    const nuxt = nuxtDefault
     await nuxt.ready()
     await new Builder(nuxtDefault).build()
     await nuxt.listen(process.env.PORT)
-    let html = await get('/')
+    const html = await get('/')
 
     expect(html).toContain('Works!')
+
+    await nuxt.close()
   })
 
   test('with mq', async () => {
-    nuxt = nuxtWithMq
+    const nuxt = nuxtWithMq
     await nuxt.ready()
     await new Builder(nuxtWithMq).build()
     await nuxt.listen(process.env.PORT)
 
     // SSR
-    let html = await get('/mq')
+    const html = await get('/mq')
     expect(html).toContain(nuxtWithMqConfig.mq.defaultBreakpoint)
+
+    await nuxt.close()
   })
 })
