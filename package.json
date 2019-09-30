@@ -1,6 +1,6 @@
 {
   "name": "nuxt-mq",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "vue-mq module for Nuxt.js",
   "license": "MIT",
   "keywords": [
@@ -33,7 +33,8 @@
     "lint": "eslint lib test",
     "test": "npm run lint && jest --detectOpenHandles",
     "codecov": "codecov",
-    "release": "standard-version && git push --follow-tags && npm publish"
+    "release": "standard-version && git push --follow-tags && npm publish",
+    "standard-version": "standard-version"
   },
   "eslintIgnore": [
     "lib/templates/*.*"
