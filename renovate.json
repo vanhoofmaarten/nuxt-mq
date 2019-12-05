@@ -1,8 +1,6 @@
 {
-  "extends": [
-    "@nuxtjs"
-  ],
-  "assignAutomerge": true,
+  "schedule": "before 3am on Monday",
+  "extends": ["@nuxtjs"],
   "assignees": ["vanhoofmaarten"],
   "automerge": true
 }
