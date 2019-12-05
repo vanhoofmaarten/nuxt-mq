@@ -9,18 +9,13 @@ nuxtConfig.dev = false
 nuxtWithMqConfig.mode = 'spa'
 nuxtWithMqConfig.dev = false
 
-// const { Nuxt, Builder } = require('nuxt')
 const pkgDir = require('pkg-dir')
 const http = require('http')
 const ecstatic = require('ecstatic')
 const { exec } = require('promisify-child-process')
 const { JSDOM } = require('jsdom')
-// const request = require('request-promise-native')
-// const nuxtDefault = new Nuxt(nuxtConfig)
-// const nuxtWithMq = new Nuxt(nuxtWithMqConfig)
 
 const url = path => `http://localhost:${process.env.PORT}${path}`
-// const get = path => request(url(path))
 
 describe('VueMq', () => {
   let server

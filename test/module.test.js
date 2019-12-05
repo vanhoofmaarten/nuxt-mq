@@ -5,7 +5,7 @@ process.env.NODE_ENV = 'production'
 const nuxtConfig = require('./fixture/nuxt.config')
 const nuxtWithMqConfig = require('./fixture/with_mq_nuxt.config')
 
-const { Nuxt, Builder } = require('nuxt')
+const { Nuxt, Builder } = require('nuxt-edge')
 const request = require('request-promise-native')
 const nuxtDefault = new Nuxt(nuxtConfig)
 const nuxtWithMq = new Nuxt(nuxtWithMqConfig)
