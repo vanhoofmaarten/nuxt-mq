@@ -53,7 +53,7 @@
     "codecov": "^3.6.5",
     "ecstatic": "^4.1.2",
     "eslint": "^6.8.0",
-    "eslint-config-standard": "^14.1.0",
+    "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jest": "^23.8.2",
     "eslint-plugin-node": "^11.0.0",
@@ -64,7 +64,7 @@
     "jsdom": "^16.2.1",
     "nuxt-edge": "^2.11.0-26277131.7af9ec8c",
     "pkg-dir": "^4.2.0",
-    "promisify-child-process": "^3.1.3",
+    "promisify-child-process": "^3.1.4",
     "standard-version": "^7.1.0"
   }
 }
