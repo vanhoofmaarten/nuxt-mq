@@ -64,7 +64,7 @@
     "jsdom": "^16.2.2",
     "nuxt-edge": "^2.11.0-26277131.7af9ec8c",
     "pkg-dir": "^4.2.0",
-    "promisify-child-process": "^3.1.4",
+    "promisify-child-process": "^4.1.0",
     "standard-version": "^7.1.0"
   }
 }
