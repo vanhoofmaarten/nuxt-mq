@@ -55,7 +55,7 @@
     "eslint": "^7.0.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.20.2",
-    "eslint-plugin-jest": "^23.10.0",
+    "eslint-plugin-jest": "^23.13.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
@@ -64,7 +64,7 @@
     "jsdom": "^16.2.2",
     "nuxt-edge": "^2.11.0-26277131.7af9ec8c",
     "pkg-dir": "^4.2.0",
-    "promisify-child-process": "^4.1.0",
+    "promisify-child-process": "^4.1.1",
     "standard-version": "^7.1.0"
   }
 }
