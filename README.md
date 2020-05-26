@@ -28,7 +28,7 @@
       'nuxt-mq',
       {
         // Default breakpoint for SSR
-        defaultBreakpoint: 'default',
+        defaultBreakpoint: 'sm',
         breakpoints: {
           sm: 450,
           md: 1250,
@@ -49,7 +49,7 @@ using top level options
   ],
 
  'mq': {
-    defaultBreakpoint: 'default',
+    defaultBreakpoint: 'sm',
     breakpoints: {
       sm: 450,
       md: 1250,
