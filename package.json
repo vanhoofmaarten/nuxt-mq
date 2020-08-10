@@ -61,7 +61,7 @@
     "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-vue": "^6.2.2",
     "jest": "^26.2.2",
-    "jsdom": "^16.3.0",
+    "jsdom": "^16.4.0",
     "nuxt-edge": "^2.11.0-26277131.7af9ec8c",
     "pkg-dir": "^4.2.0",
     "promisify-child-process": "^4.1.1",
