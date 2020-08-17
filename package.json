@@ -52,7 +52,7 @@
   "devDependencies": {
     "codecov": "^3.7.2",
     "ecstatic": "^4.1.2",
-    "eslint": "^7.6.0",
+    "eslint": "^7.7.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jest": "^23.20.0",
@@ -60,7 +60,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1",
     "eslint-plugin-vue": "^6.2.2",
-    "jest": "^26.2.2",
+    "jest": "^26.4.0",
     "jsdom": "^16.4.0",
     "nuxt-edge": "^2.11.0-26277131.7af9ec8c",
     "pkg-dir": "^4.2.0",
