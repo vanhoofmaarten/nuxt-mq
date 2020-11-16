@@ -30,8 +30,9 @@
     "generate": "nuxt generate test/fixture -c with_mq_nuxt.config.js",
     "build-spa": "nuxt build test/fixture -c with_mq_nuxt.config.js --spa  --verbose",
     "start-spa": "nuxt start test/fixture -c with_mq_nuxt.config.js --spa",
-    "lint": "eslint lib test",
-    "test": "npm run lint && jest --detectOpenHandles",
+    "test": "npm run test:lint && npm run test:unit",
+    "test:lint": "eslint lib test",
+    "test:unit": "jest --detectOpenHandles",
     "codecov": "codecov",
     "release": "standard-version && git push --follow-tags && npm publish",
     "standard-version": "standard-version"
