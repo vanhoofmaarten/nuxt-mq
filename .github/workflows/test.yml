@@ -20,7 +20,7 @@ jobs:
       - name: Install dependencies
         uses: bahmutov/npm-install@v1
       - name: Run test (${{ matrix.test-type }})
-        run: 'npm test:${{ matrix.test-type }}'
+        run: 'npm run test:${{ matrix.test-type }}'
         env:
           CI: true
       - name: Run codecov
