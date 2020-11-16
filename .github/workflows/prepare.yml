@@ -1,0 +1,63 @@
+name: Prepare release
+
+on:
+  schedule:
+    - cron: '0 3 * * 2'
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 10.x
+
+      - name: Install dependencies
+        uses: bahmutov/npm-install@v1
+
+      - name: Dry run Semantic Release
+        id: semantic
+        uses: cycjimmy/semantic-release-action@v2
+        with:
+          branch: develop
+          dry_run: true
+          extra_plugins: |
+            @semantic-release/changelog
+            @semantic-release/exec
+            @semantic-release/git
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Checkout master
+        uses: actions/checkout@v2
+        with:
+          ref: master
+
+      - name: Reset develop branch
+        run: |
+          git fetch origin develop:develop
+          git reset --hard develop
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v2
+        if: steps.semantic.outputs.new_release_published == 'true'
+        with:
+          branch: 'release/${{ steps.semantic.outputs.new_release_version }}'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: 'chore(Version): Prepare v${{ steps.semantic.outputs.new_release_version }}. Merge release/${{ steps.semantic.outputs.new_release_version }} into develop.'
+          title: Prepare v${{ steps.semantic.outputs.new_release_version }}
+          body: |
+            Prepare v${{ steps.semantic.outputs.new_release_version }} with the following changes:
+
+            ---
+
+            ${{ steps.semantic.outputs.new_release_notes }}
+
+            ---
+
+            *This is an auto-generated PR*
