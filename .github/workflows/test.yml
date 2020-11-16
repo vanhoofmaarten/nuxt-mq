@@ -9,7 +9,7 @@ jobs:
     strategy:
       matrix:
         node-version: [10.x]
-        test-type: [unit, lint]
+        test-type: [e2e, lint]
 
     steps:
       - uses: actions/checkout@v2
