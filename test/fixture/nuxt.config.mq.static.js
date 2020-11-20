@@ -1,4 +1,4 @@
-const config = require('./with_mq_nuxt.config')
+const config = require('./nuxt.config.mq.ssr')
 
 module.exports = {
   ...config,
