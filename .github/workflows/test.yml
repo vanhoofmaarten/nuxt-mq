@@ -23,5 +23,3 @@ jobs:
         run: 'npm run test:${{ matrix.test-type }}'
         env:
           CI: true
-      - name: Run codecov
-        run: npm run codecov

@@ -32,8 +32,7 @@
     "start-spa": "nuxt start test/fixture -c nuxt.config.mq.static.js",
     "test": "npm run test:lint && npm run test:e2e",
     "test:lint": "eslint lib test",
-    "test:e2e": "jest --runInBand",
-    "codecov": "codecov"
+    "test:e2e": "jest --runInBand"
   },
   "eslintIgnore": [
     "lib/templates/*.*"
@@ -45,7 +44,6 @@
     "vue-mq": "^1.0.1"
   },
   "devDependencies": {
-    "codecov": "^3.8.1",
     "eslint": "^7.14.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
