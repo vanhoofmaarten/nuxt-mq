@@ -4,15 +4,10 @@ module.exports = {
     sourceType: 'module'
   },
   env: {
-    browser: true,
-    node: true,
-    jest: true
+    node: true
   },
   extends: 'standard',
-  plugins: [
-    'jest',
-    'vue'
-  ],
+  plugins: ['vue'],
   rules: {
     // Allow paren-less arrow functions
     'arrow-parens': 0,
@@ -23,8 +18,17 @@ module.exports = {
     // Do not allow console.logs etc...
     'no-console': 2
   },
-  globals: {
-    'jest/globals': true,
-    jasmine: true
-  }
+  overrides: [
+    {
+      files: ['**/*.test.js'],
+      extends: ['plugin:jest/recommended'],
+      globals: {
+        page: true,
+        browser: true,
+        context: true,
+        jestPuppeteer: true
+      }
+    }
+  ],
+  ignorePatterns: ['**/dist']
 }

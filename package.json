@@ -23,18 +23,16 @@
     "access": "public"
   },
   "scripts": {
-    "dev": "nuxt test/fixture -c with_mq_nuxt.config.js",
-    "dev-debug": "node --inspect ./node_modules/nuxt/bin/nuxt test/fixture -c with_mq_nuxt.config.js",
-    "build": "nuxt build test/fixture -c with_mq_nuxt.config.js",
-    "start": "nuxt start test/fixture -c with_mq_nuxt.config.js",
-    "generate": "nuxt generate test/fixture -c with_mq_nuxt.config.js",
-    "build-spa": "nuxt build test/fixture -c with_mq_nuxt.config.js --spa  --verbose",
-    "start-spa": "nuxt start test/fixture -c with_mq_nuxt.config.js --spa",
-    "lint": "eslint lib test",
-    "test": "npm run lint && jest --detectOpenHandles",
-    "codecov": "codecov",
-    "release": "standard-version && git push --follow-tags && npm publish",
-    "standard-version": "standard-version"
+    "dev": "nuxt test/fixture -c nuxt.config.mq.ssr.js",
+    "dev-debug": "node --inspect ./node_modules/nuxt/bin/nuxt test/fixture -c nuxt.config.mq.ssr.js",
+    "build": "nuxt build test/fixture -c nuxt.config.mq.ssr.js",
+    "start": "nuxt start test/fixture -c nuxt.config.mq.ssr.js",
+    "generate": "nuxt generate test/fixture -c nuxt.config.mq.ssr.js",
+    "build-spa": "nuxt build test/fixture -c nuxt.config.mq.static.js  --verbose",
+    "start-spa": "nuxt start test/fixture -c nuxt.config.mq.static.js",
+    "test": "npm run test:lint && npm run test:e2e",
+    "test:lint": "eslint lib test",
+    "test:e2e": "jest --runInBand"
   },
   "eslintIgnore": [
     "lib/templates/*.*"
@@ -42,29 +40,22 @@
   "files": [
     "lib"
   ],
-  "jest": {
-    "testEnvironment": "node",
-    "collectCoverage": true
-  },
   "dependencies": {
     "vue-mq": "^1.0.1"
   },
   "devDependencies": {
-    "codecov": "^3.8.1",
-    "ecstatic": "^4.1.2",
-    "eslint": "^7.13.0",
-    "eslint-config-standard": "^16.0.1",
+    "eslint": "^7.14.0",
+    "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jest": "^24.1.3",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.1.0",
+    "eslint-plugin-standard": "^5.0.0",
     "eslint-plugin-vue": "^7.1.0",
     "jest": "^26.6.3",
-    "jsdom": "^16.4.0",
-    "nuxt-edge": "^2.11.0-26277131.7af9ec8c",
-    "pkg-dir": "^5.0.0",
-    "promisify-child-process": "^4.1.1",
-    "standard-version": "^9.0.0"
+    "jest-dev-server": "^4.4.0",
+    "jest-puppeteer": "^4.4.0",
+    "nuxt-edge": "^2.14.8-26768191.9ce75c5d",
+    "puppeteer": "^5.5.0"
   }
 }

@@ -1,41 +1,56 @@
-jasmine.DEFAULT_TIMEOUT_INTERVAL = 20000
-process.env.PORT = process.env.PORT || 5060
-process.env.NODE_ENV = 'production'
+const {
+  setup: setupDevServer,
+  teardown: teardownDevServer
+} = require('jest-dev-server')
+const { promisify } = require('util')
+const exec = promisify(require('child_process').exec)
+const port = 3000
+const url = path => `http://localhost:${port}${path}`
+const timeout = 30 * 1000
 
-const nuxtConfig = require('./fixture/nuxt.config')
-const nuxtWithMqConfig = require('./fixture/with_mq_nuxt.config')
+const setup = async config => {
+  await exec(`nuxt generate test/fixture -c ${config}`)
+  await setupDevServer({
+    command: `nuxt start test/fixture -c ${config} --port=${port}`,
+    launchTimeout: timeout,
+    port
+  })
+}
 
-const { Nuxt, Builder } = require('nuxt-edge')
-const request = require('request-promise-native')
-const nuxtDefault = new Nuxt(nuxtConfig)
-const nuxtWithMq = new Nuxt(nuxtWithMqConfig)
+const getConfigName = ({ mode, mq } = { mq: true }) => [
+  'nuxt',
+  'config',
+  ...mq ? ['mq'] : [],
+  mode.toLowerCase(),
+  'js'
+].join('.')
 
-const url = path => `http://localhost:${process.env.PORT}${path}`
-const get = path => request(url(path))
-
-describe('VueMq', () => {
-  test('default', async () => {
-    const nuxt = nuxtDefault
-    await nuxt.ready()
-    await new Builder(nuxtDefault).build()
-    await nuxt.listen(process.env.PORT)
-    const html = await get('/')
-
-    expect(html).toContain('Works!')
-
-    await nuxt.close()
+describe.each(['SSR', 'Static'])('%s', mode => {
+  afterEach(async () => {
+    await teardownDevServer()
   })
 
-  test('with mq', async () => {
-    const nuxt = nuxtWithMq
-    await nuxt.ready()
-    await new Builder(nuxtWithMq).build()
-    await nuxt.listen(process.env.PORT)
+  test(
+    'default',
+    async () => {
+      await setup(getConfigName({ mode }))
+      await page.goto(url('/'))
+      const html = await page.content()
+      expect(html).toContain('Works!')
+    },
+    timeout
+  )
 
-    // SSR
-    const html = await get('/mq')
-    expect(html).toContain(nuxtWithMqConfig.mq.defaultBreakpoint)
-
-    await nuxt.close()
-  })
+  test(
+    'with mq',
+    async () => {
+      const configName = getConfigName({ mq: true, mode })
+      await setup(configName)
+      const nuxtWithMqConfig = require(`./fixture/${configName}`)
+      await page.goto(url('/mq'))
+      const html = await page.content()
+      expect(html).toContain(nuxtWithMqConfig.mq.defaultBreakpoint)
+    },
+    timeout
+  )
 })
