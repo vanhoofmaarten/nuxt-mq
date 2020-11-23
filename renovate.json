@@ -1,6 +1,10 @@
 {
-  "schedule": "before 3am on Monday",
-  "extends": ["@nuxtjs"],
-  "assignees": ["vanhoofmaarten"],
-  "automerge": true
+  "extends": [
+    "config:base",
+    "group:allNonMajor",
+    ":automergeAll",
+    ":maintainLockFilesWeekly"
+  ],
+  "rangeStrategy": "update-lockfile",
+  "prHourlyLimit": 5
 }
