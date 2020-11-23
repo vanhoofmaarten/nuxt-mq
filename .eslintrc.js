@@ -29,5 +29,6 @@ module.exports = {
         jestPuppeteer: true
       }
     }
-  ]
+  ],
+  ignorePatterns: ['**/dist']
 }
