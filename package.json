@@ -33,9 +33,7 @@
     "test": "npm run test:lint && npm run test:e2e",
     "test:lint": "eslint lib test",
     "test:e2e": "jest --runInBand",
-    "codecov": "codecov",
-    "release": "standard-version && git push --follow-tags && npm publish",
-    "standard-version": "standard-version"
+    "codecov": "codecov"
   },
   "eslintIgnore": [
     "lib/templates/*.*"
@@ -60,7 +58,6 @@
     "jest-dev-server": "^4.4.0",
     "jest-puppeteer": "^4.4.0",
     "nuxt-edge": "^2.14.8-26768191.9ce75c5d",
-    "puppeteer": "^5.5.0",
-    "standard-version": "^9.0.0"
+    "puppeteer": "^5.5.0"
   }
 }
