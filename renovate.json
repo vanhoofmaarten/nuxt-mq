@@ -3,7 +3,8 @@
     "config:base",
     "group:allNonMajor",
     ":automergeAll",
-    ":maintainLockFilesWeekly"
+    ":maintainLockFilesWeekly",
+    "schedule:earlyMondays"
   ],
   "rangeStrategy": "update-lockfile",
   "prHourlyLimit": 5
