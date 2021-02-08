@@ -58,6 +58,6 @@
     "jest-puppeteer": "^4.4.0",
     "node-fetch": "^2.6.1",
     "nuxt-edge": "^2.14.8-26779714.3b19e3f4",
-    "puppeteer": "^5.5.0"
+    "puppeteer": "^7.0.1"
   }
 }
