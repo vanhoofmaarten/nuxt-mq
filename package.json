@@ -44,10 +44,10 @@
     "vue-mq": "^1.0.1"
   },
   "devDependencies": {
-    "eslint": "^7.21.0",
+    "eslint": "^7.22.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jest": "^24.1.8",
+    "eslint-plugin-jest": "^24.3.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.3.1",
     "eslint-plugin-standard": "^5.0.0",
